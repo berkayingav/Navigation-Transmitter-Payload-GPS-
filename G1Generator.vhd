@@ -34,7 +34,7 @@ architecture Behavioral of G1Generator is
 begin
     process(clk,reset)
     begin
-        if reset = '1' then
+        if reset = '0' then
             G1 <= (others => '1');
         elsif rising_edge(clk) then
             G1 <= (G1(2) xor G1(9)) & G1(0 to 8);

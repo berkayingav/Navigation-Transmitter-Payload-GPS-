@@ -35,7 +35,7 @@ architecture Behavioral of G2Generator is
 begin
     process(clk,reset)
     begin
-        if reset = '1' then
+        if reset = '0' then
             G2 <= (others => '1');
         elsif rising_edge(clk) then
             G2 <= (G2(1) xor G2(2) xor G2(5) xor G2(7) xor G2(8) xor G2(9)) & G2(0 to 8);
